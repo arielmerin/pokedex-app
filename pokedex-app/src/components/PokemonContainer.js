@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Fragment} from 'react'
 import Pokemon from "./Pokemon";
 import getPoke from "../services/getPoke";
 import styled from "styled-components";
@@ -69,14 +69,18 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 	}
 
 	const listResult = () =>{
-		return <Pokemon url={queryNameTerm} />
+		return <Pokemon url={queryNameTerm}/>
 	}
 
 	if(typeOfSearch === 'type'){
-		return <PokemonContainerStyled>
-			{ listTypes()}
+		return<>
+			<div>
+				<PokemonContainerStyled>
+					{ listTypes()}
+				</PokemonContainerStyled>
+			</div>
 			<Pagination data={pokeURL} setPage={setCurrentPage} />
-		</PokemonContainerStyled>
+		</>
 	}else if(typeOfSearch === 'name'){
 		return <div>
 			{listResult()}
@@ -84,9 +88,11 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 	}
 	return (
 		<>
-		<PokemonContainerStyled>
-			{listAll()}
-		</PokemonContainerStyled>
+			<div>
+				<PokemonContainerStyled>
+					{listAll()}
+				</PokemonContainerStyled>
+			</div>
 		<Pagination data={pokeURL} setPage={setCurrentPage} />
 		</>)
 

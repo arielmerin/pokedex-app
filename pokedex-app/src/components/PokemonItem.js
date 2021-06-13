@@ -11,12 +11,10 @@ const PokemonItemStyled = styled.div`
 	border-radius: 10%;
 	min-width: 250px;
 	max-width: 40vw;
-	//margin: 0 auto;
 	margin-top: 120px;
 	bottom: 0;
 	position: relative;
-	//position: absolute;
-	background: ${props => props.colorB || "white"};
+	background: ${props => props.colorB || '#fff'};
 	& .psj{
 		display: block;
 		width: 70%;
@@ -32,6 +30,9 @@ const PokemonItemStyled = styled.div`
 	&:hover{
 		cursor: pointer;
 		box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	}
+	&:hover img{
+	top: -8rem;
 	}
 	& h3{
 		display: block;
@@ -85,7 +86,7 @@ const PokemonItem = ({img, name, type}) =>{
 			<h3>{capitalize(name)}</h3>
 			<h5>{type}</h5>
 			<div>
-				<img src={`./${capitalize(type)}.png`} alt=""/>
+				<img src={`./${capitalize(type)}.png`} alt={name}/>
 			</div>
 		</PokemonItemStyled>
 	)

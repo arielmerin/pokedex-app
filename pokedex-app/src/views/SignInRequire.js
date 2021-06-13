@@ -10,7 +10,15 @@ const SignInContainer = styled.div`
 		height: 100vh;
 		background-color: yellow;
 		& .logo{
-		width: 100vw;
+		max-width: 90vw;
+		}
+		& .searcher{
+		width: 90vw;
+		
+		margin: 0;
+		}
+		& .logo img{
+		max-width: 80vw;
 		}
 	`
 
@@ -23,24 +31,25 @@ const SignInRequire = ({onSubmit}) =>{
 			</div>
 
 
-
-			<form onSubmit={handleSubmit(onSubmit)} >
-				<ul id="growing-search-freebie">
-					<li>
-						<div className="growing-search">
-							<div className="input">
-								<input placeholder='User' name="username" id='username' type="text" {...register('username')} />
+			<div className="searcher">
+				<form onSubmit={handleSubmit(onSubmit)} >
+					<ul id="growing-search-freebie">
+						<li>
+							<div className="growing-search">
+								<div className="input">
+									<input placeholder='User' name="username" id='username' type="text" {...register('username')} />
+								</div>
+								<div className="submit">
+									<button type="submit" name="go_search">
+										<span className="fa fa-unlock"> </span>
+									</button>
+								</div>
 							</div>
-							<div className="submit">
-								<button type="submit" name="go_search">
-									<span className="fa fa-unlock"> </span>
-								</button>
-							</div>
-						</div>
-					</li>
-				</ul>
+						</li>
+					</ul>
 
-			</form>
+				</form>
+			</div>
 		</SignInContainer>
 	)
 }

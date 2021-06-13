@@ -17,6 +17,7 @@ const SearchContainerStyled = styled.div`
 			width: 20vw;
 			align-items: center;
 			flex-wrap: wrap;
+			min-width: 200px;
 		}
 		& button{
 		height: 100%;

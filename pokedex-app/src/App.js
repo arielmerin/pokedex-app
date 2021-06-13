@@ -15,11 +15,8 @@ function App() {
             <ProtectedRoute path='/pokedex'>
                 <Pokedex/>
             </ProtectedRoute>
-            <Route path='/login'>
+            <Route path='/'>
                 <LogIn/>
-            </Route>
-            <Route path='/'
-                render={({location})=> <Redirect to={{pathname: '/pokedex', from: location}}/>}  >
             </Route>
         </Switch>
       </Router>
