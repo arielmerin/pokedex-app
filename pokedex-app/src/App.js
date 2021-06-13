@@ -1,7 +1,7 @@
 
 import './App.css';
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import ProtectedRoute from "./components/ProtectedRoute";
 import LogIn from "./components/LogIn";
 import Pokedex from "./components/Pokedex";
