@@ -15,7 +15,7 @@ function App() {
             <ProtectedRoute path='/pokedex'>
                 <Pokedex/>
             </ProtectedRoute>
-            <Route path='/'>
+            <Route path='*'>
                 <LogIn/>
             </Route>
         </Switch>
