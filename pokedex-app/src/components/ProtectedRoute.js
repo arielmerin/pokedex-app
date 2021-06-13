@@ -7,7 +7,7 @@ const ProtectedRoute = ({children, ...props}) =>{
 	return(
 		<Route {...props}
 			render={({location}) => auth.pokemonTrainer ? (children) :
-				(<Redirect to={{pathname: '/login', state: { from: location} }} />) }
+				(<Redirect to={{pathname: '/', state: { from: location} }} />) }
 		/>	)
 }
 export default ProtectedRoute;
