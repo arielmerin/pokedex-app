@@ -99,7 +99,10 @@ const StatsArrayContainer = styled.div`
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
+	width: 95vw;
+	@media only screen and ${breakpoint.device.lg}{
 	width: 80vw;
+	}
 `
 
 const ImgTypeContainer = styled.div`
