@@ -128,14 +128,14 @@ const PokemonItem = ({img, name, types, lifePoints, attack, defense, speed}) =>{
 
 	const listTypesImages = types.map((value, index) =>{
 		const name = capitalize(value.type.name)
-		return <div className='img-container'>
-			<img key={index} src={`./${name}.png`} alt={name}/>
+		return <div className='img-container' key={index}>
+			<img  src={`./${name}.png`} alt={name}/>
 		</div>
 	})
 
 	const listTypes = types.map((value, index) =>{
 		const name = capitalize(value.type.name)
-		return <span>{name} </span>
+		return <span key={index}>{name} </span>
 	})
 
 	return(

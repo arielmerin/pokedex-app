@@ -8,7 +8,7 @@ const SignInContainer = styled.div`
 		justify-content: center;
 		width: 100%;
 		height: 100vh;
-		background-color: yellow;
+		background-color: #ffbe00;
 		& .logo{
 		max-width: 90vw;
 		}
