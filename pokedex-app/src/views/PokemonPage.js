@@ -39,7 +39,10 @@ const Stat = styled.div`
 		width: ${props => `${props.porcentage}%` || '0%'};
 		background-color: ${props => props.colorP || 'white'};
 		margin: 2px;
-		font-size: 1.2rem;
+		font-size: 0.7em;
+		@media only screen and ${breakpoint.device.sm}{
+		font-size: 1.5em;
+		}
 		font-weight: 600;
 		border-radius: 10rem;
 		font-family: 'Montserrat', sans-serif;
