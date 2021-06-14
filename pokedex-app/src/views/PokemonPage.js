@@ -7,7 +7,13 @@ import capitalize from "../services/Capitalize";
 
 const PokemonPageStyled = styled.div`
 		background: ${props => props.colorB || '#fff'};
+		height: 100%;
+		width: 100vw;
 	`
+
+const PokemonImage = styled.img`
+	max-width: 90vw;
+`
 const PokemonPage = ( ) =>{
 	const [avColor, setAvColor] = useState('white')
 	const [img, setImg] = useState('')
@@ -40,7 +46,7 @@ const PokemonPage = ( ) =>{
 
 	return(
 		<PokemonPageStyled colorB={avColor} >
-			<img className="psj" id={name} src={img} alt={name}/>
+			<PokemonImage id={name} src={img} alt={name}/>
 				<h3>{capitalize(name)}</h3>
 			<h2>{numPokedex}</h2>
 			<h5>{capitalize(type)}</h5>
