@@ -8,7 +8,6 @@ const LogIn = ( )=>{
 	const {signIn} = useAuth();
 
 	const handleSignIn = (obj) =>{
-		console.log(obj.username)
 		signIn(obj.username)
 		history.push('/pokedex')
 	}

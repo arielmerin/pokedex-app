@@ -49,7 +49,6 @@ const SearchContainer = ({setNameSearch, setTypeSearch, setField}) =>{
 		getPokeByName(name)
 			.then((res) => {
 				setNameSearch(res.config.url)
-				console.log('search container name')
 			})
 			.catch(error => (error))
 	}

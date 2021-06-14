@@ -70,16 +70,13 @@ const Pagination = ({data, setPage}) =>{
 		pageDecrementBtn = <li onClick={handlePrevbtn}> &hellip; </li>;
 	}
 
-
-
 	return(
 		<div className='page-container'>
 			<ul className="pageNumbers">
 				<li>
 					<button className='prev'
 						onClick={handlePrevbtn}
-						disabled={currentPage === pages[0]}
-					>
+						disabled={currentPage === pages[0]}>
 						Prev
 					</button>
 				</li>
@@ -90,8 +87,7 @@ const Pagination = ({data, setPage}) =>{
 				<li>
 					<button className='next'
 						onClick={handleNextbtn}
-						disabled={currentPage === pages[pages.length - 1]}
-					>
+						disabled={currentPage === pages[pages.length - 1]}>
 						Next
 					</button>
 				</li>

@@ -1,11 +1,9 @@
-/* General Styles */
 center > h4 {
     color: #eeeeee;
     margin-top: 10px;
 }
 body {
     margin: 0;
-    /*font-family: Arial; */
     background-color: #f1f1f1;
 }
 
@@ -30,17 +28,6 @@ ul#growing-search-freebie > li:last-child {
 ul#growing-search-freebie > li > span {
     margin-bottom: 10px;
 }
-
-
-/* STYLES */
-/*
- * Freebie from PixelsDaily
- * (www.pixelsdaily.com)
- *
- * @freebie: growing-search
- * @author: Francisco Neves (@fntneves)
- * @website: www.francisconeves.com
- */
 
 .growing-search {
     padding: 5px 5px 5px 7px;

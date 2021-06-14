@@ -7,7 +7,6 @@ const Home = () => {
 		<div>
 			Welcome to the pokedex
 			<button onClick={()=>{
-					console.log('esto es history ', history)
 					history.push('/login')
 			}}>Login</button>
 		</div>

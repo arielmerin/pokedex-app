@@ -5,8 +5,7 @@
     padding: 0;
 }
 .page-container{
-    margin: auto;
-    margin-top: 20px;
+    margin: 50px auto auto;
     display: flex;
     height: 40px;
     justify-content: center;

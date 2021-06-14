@@ -32,7 +32,6 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 
 	useEffect(() => {
 		if(currentPage === 1){
-			console.log('acá andamos puta')
 			setElementsStart(currentPage-1)
 			setElementsEnd(currentPage+3)
 		}
@@ -67,6 +66,7 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 			return <Pokemon url={item.url} key={key}/>
 		})
 	}
+
 
 	const listResult = () =>{
 		return <Pokemon url={queryNameTerm}/>
