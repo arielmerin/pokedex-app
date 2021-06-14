@@ -8,7 +8,7 @@ const SignInContainer = styled.div`
 		justify-content: center;
 		width: 100%;
 		height: 100vh;
-		background-color: #ffbe00;
+		background-color: #1c2755;
 		& .logo{
 		max-width: 90vw;
 		}
@@ -30,10 +30,11 @@ const SignInRequire = ({onSubmit}) =>{
 				<img src="https://images.wikidexcdn.net/mwuploads/esssbwiki/7/77/latest/20111028181540/TituloUniversoPok%C3%A9mon.png" alt=""/>
 			</div>
 
-
 			<div className="searcher">
 				<form onSubmit={handleSubmit(onSubmit)} >
 					<ul id="growing-search-freebie">
+						<h1 style={{color: 'white', fontFamily: 'Hammersmith One'}}>Welcome trainer!</h1>
+
 						<li>
 							<div className="growing-search">
 								<div className="input">
@@ -47,7 +48,6 @@ const SignInRequire = ({onSubmit}) =>{
 							</div>
 						</li>
 					</ul>
-
 				</form>
 			</div>
 		</SignInContainer>

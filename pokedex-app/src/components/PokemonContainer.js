@@ -1,8 +1,9 @@
-import React, {useState, useEffect, Fragment} from 'react'
+import React, {useState, useEffect} from 'react'
 import Pokemon from "./Pokemon";
 import getPoke from "../services/getPoke";
 import styled from "styled-components";
 import Pagination from "./Pagination";
+import {useAuth} from "../provider/AuthProvider";
 
 
 const PokemonContainerStyled = styled.div`
@@ -16,6 +17,39 @@ const PokemonContainerStyled = styled.div`
 	align-items: center;
 	`
 
+
+const UserName = styled.div`
+	display: flex;
+	font-family: 'Hammersmith One', sans-serif;
+	color: #7dad91;
+	font-size: 1.5em; 
+	@media only screen and (min-width: 768px){
+	font-size: 0.8em; 
+    position: absolute;
+    
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+	}
+	 justify-content: center;
+`
+const UserNameTwo = styled.div`
+	display: none;
+	font-family: 'Hammersmith One', sans-serif;
+	color: #7dad91;
+	font-size: 1.5em; 
+	@media only screen and (min-width: 768px){
+	display: flex;
+	font-size: 0.8em; 
+    position: absolute;
+    right:0;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+	}
+	 justify-content: center;
+`
+
+
+
 const PokemonContainer = ({typeOfSearch, name, type})=>{
 	const [queryTypeTerm, setQueryTypeTerm] = useState([])
 	const [queryNameTerm, setQueryNameTerm] = useState('')
@@ -23,6 +57,7 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 	const [elementsEnd, setElementsEnd] = useState(4)
 	const [elementsStart, setElementsStart] = useState(0)
 	const [currentPage, setCurrentPage] = useState(0)
+	const nameUser = useAuth()
 
 	useEffect(() => {
 		getPoke('').then(res=>{
@@ -86,8 +121,15 @@ const PokemonContainer = ({typeOfSearch, name, type})=>{
 			{listResult()}
 		</div>
 	}
+
 	return (
 		<>
+			<UserName >
+				<p>Welcome!  {nameUser.pokemonTrainer}</p>
+			</UserName>
+			<UserNameTwo >
+				<p>Welcome!  {nameUser.pokemonTrainer}</p>
+			</UserNameTwo>
 			<div>
 				<PokemonContainerStyled>
 					{listAll()}

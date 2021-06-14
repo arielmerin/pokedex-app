@@ -87,7 +87,7 @@ const PokemonEncounters = () =>{
 	return( <EncountersPage colorB={avColor}>
 		<Link to={`/pokemon/${id}`}>Go Back</Link>
 		<div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', height: '90vh'}}>
-			<div>
+			<div style={{width: '100vw'}}>
 				<Name>{capitalize(id)}</Name>
 				<Name>Encounters</Name>
 			</div>
