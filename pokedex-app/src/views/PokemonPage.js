@@ -8,11 +8,16 @@ import capitalize from "../services/Capitalize";
 const PokemonPageStyled = styled.div`
 		background: ${props => props.colorB || '#fff'};
 		height: 100%;
+		min-height: 100vh;
 		width: 100vw;
 	`
 
 const PokemonImage = styled.img`
 	max-width: 90vw;
+	&::after {
+	width:100px;
+	background-color: white;
+	}
 `
 const PokemonPage = ( ) =>{
 	const [avColor, setAvColor] = useState('white')
